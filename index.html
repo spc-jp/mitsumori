@@ -85,7 +85,7 @@
                 <i class="fa-solid fa-layer-group text-blue-800 mr-2"></i>戦略整理パートナー
             </h1>
             
-            <span class="text-xs text-gray-400">Ver 1.4</span>
+            <span class="text-xs text-gray-400">Ver 1.5</span>
         </div>
     </header>
 
@@ -641,9 +641,21 @@ ${supports.length > 0 ? supports.map(s => `・${s}`).join('\n') : 'なし'}
     // Gmailで送信
     function sendViaGmail() {
         const data = getEmailData();
-        // Gmail作成画面のURL
-        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${data.to}&su=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(data.body)}`;
-        window.open(gmailUrl, '_blank');
+        
+        // スマホ判定（簡易的）
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+        if (isMobile) {
+            // スマホの場合は、OS標準のメーラー起動 (mailto) に切り替える
+            // ※Gmailアプリが入っていれば選択肢に出る可能性が高い
+            const mailtoUrl = `mailto:${data.to}?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(data.body)}`;
+            window.location.href = mailtoUrl;
+        } else {
+            // PCの場合はWeb版Gmail作成画面を開く
+            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${data.to}&su=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(data.body)}`;
+            window.open(gmailUrl, '_blank');
+        }
+        
         closeModal();
     }
 
