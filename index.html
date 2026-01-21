@@ -85,7 +85,7 @@
                 <i class="fa-solid fa-layer-group text-blue-800 mr-2"></i>戦略整理パートナー
             </h1>
             
-            <span class="text-xs text-gray-400">Ver 1.3</span>
+            <span class="text-xs text-gray-400">Ver 1.4</span>
         </div>
     </header>
 
@@ -138,7 +138,8 @@
                     <div class="border-2 border-gray-200 rounded-lg p-4 transition-all hover:border-blue-300">
                         <div class="flex justify-between items-center mb-1">
                             <span class="font-bold text-lg text-slate-800">A 伴走プラン</span>
-                            <span class="text-blue-800 font-bold">140,000円<span class="text-xs text-gray-500">/月</span></span>
+                            <!-- 金額変更 & 税抜表記追加 -->
+                            <span class="text-blue-800 font-bold">150,000円<span class="text-xs text-gray-500">（税抜）/月</span></span>
                         </div>
                         <div class="text-xs text-gray-500 mb-2">週1回 MTG / 思考整理・優先順位設計</div>
                         <p class="text-xs text-slate-600 bg-gray-50 p-2 rounded">
@@ -153,7 +154,8 @@
                     <div class="border-2 border-gray-200 rounded-lg p-4 transition-all hover:border-blue-300">
                         <div class="flex justify-between items-center mb-1">
                             <span class="font-bold text-lg text-slate-800">B 設計プラン</span>
-                            <span class="text-blue-800 font-bold">80,000円<span class="text-xs text-gray-500">/月</span></span>
+                            <!-- 税抜表記追加 -->
+                            <span class="text-blue-800 font-bold">80,000円<span class="text-xs text-gray-500">（税抜）/月</span></span>
                         </div>
                         <div class="text-xs text-gray-500 mb-2">月2回 MTG / 施策レビュー・設計</div>
                         <p class="text-xs text-slate-600 bg-gray-50 p-2 rounded">
@@ -168,7 +170,8 @@
                     <div class="border-2 border-gray-200 rounded-lg p-4 transition-all hover:border-blue-300">
                         <div class="flex justify-between items-center mb-1">
                             <span class="font-bold text-lg text-slate-800">C 確認プラン</span>
-                            <span class="text-blue-800 font-bold">45,000円<span class="text-xs text-gray-500">/月</span></span>
+                            <!-- 税抜表記追加 -->
+                            <span class="text-blue-800 font-bold">45,000円<span class="text-xs text-gray-500">（税抜）/月</span></span>
                         </div>
                         <div class="text-xs text-gray-500 mb-2">月1回 MTG / 状況整理・定点観測</div>
                         <p class="text-xs text-slate-600 bg-gray-50 p-2 rounded">
@@ -365,7 +368,7 @@
     ];
 
     const plans = {
-        'planA': { name: 'A 伴走プラン（週1回）', price: 140000, desc: '週1回のMTGで思考整理と優先順位設計を行います。' },
+        'planA': { name: 'A 伴走プラン（週1回）', price: 150000, desc: '週1回のMTGで思考整理と優先順位設計を行います。' }, // 価格変更
         'planB': { name: 'B 設計プラン（月2回）', price: 80000, desc: '月2回のMTGで施策レビューと次の一手を設計します。' },
         'planC': { name: 'C 確認プラン（月1回）', price: 45000, desc: '月1回のMTGで状況整理と定点観測を行います。' }
     };
